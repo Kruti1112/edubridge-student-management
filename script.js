@@ -371,3 +371,4 @@ window.logout = () => {
 };
 
 // improvement done
+// Improved login validation
