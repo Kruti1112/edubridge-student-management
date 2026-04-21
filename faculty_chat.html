@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Queries - EduBridge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <aside class="glass-panel sidebar">
+    <div class="sidebar-logo">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span>EduBridge</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="faculty_dashboard.html"><i class="fa-solid fa-house"></i> Faculty Dashboard</a></li>
+      <li><a href="faculty_attendance.html"><i class="fa-solid fa-clipboard-user"></i> Manage Attendance</a></li>
+      <li><a href="faculty_leave.html"><i class="fa-solid fa-envelope-open-text"></i> Leave Approvals</a></li>
+      <li><a href="faculty_chat.html"><i class="fa-solid fa-comments"></i> Student Queries</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header class="header">
+      <div>
+        <h1>Respond to Student Doubts</h1>
+        <p style="color: var(--text-muted); margin-top: 5px;">View and answer incoming chats.</p>
+      </div>
+      <div class="user-profile">
+        <div class="avatar"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <span class="username-display" style="font-weight: 500;"></span>
+        <button onclick="logout()" class="btn-primary" style="margin-left: 15px; padding: 8px 16px;">Logout</button>
+      </div>
+    </header>
+
+    <div class="glass-panel chat-container">
+      <div class="chat-messages" id="fac-chatBox">
+          <!-- Populated by JS -->
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="fac-msg" placeholder="Type your reply here...">
+        <button id="fac-sendBtn" class="btn-primary" style="padding: 12px 24px;"><i class="fa-solid fa-paper-plane"></i> Send Reply</button>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

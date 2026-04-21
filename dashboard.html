@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - EduBridge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- Sidebar -->
+  <aside class="glass-panel sidebar">
+    <div class="sidebar-logo">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span>EduBridge</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="attendance.html"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+      <li><a href="leave.html"><i class="fa-solid fa-envelope-open-text"></i> Leave</a></li>
+      <li><a href="chat.html"><i class="fa-solid fa-comments"></i> Mentor Chat</a></li>
+      <li><a href="report.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <header class="header">
+      <div>
+        <h1>Dashboard Overview</h1>
+        <p style="color: var(--text-muted); margin-top: 5px;">Welcome back, <span class="username-display"></span>!</p>
+      </div>
+      <div class="user-profile">
+        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+        <span class="username-display" style="font-weight: 500;"></span>
+        <button onclick="logout()" class="btn-primary" style="margin-left: 15px; padding: 8px 16px;">Logout</button>
+      </div>
+    </header>
+
+    <div class="dashboard-grid">
+      <div class="glass-panel stat-card">
+        <div class="stat-icon attendance"><i class="fa-solid fa-check-double"></i></div>
+        <div class="stat-info">
+          <h3>Overall Attendance</h3>
+          <p id="dash-attendance">Loading...</p>
+        </div>
+      </div>
+
+      <div class="glass-panel stat-card">
+        <div class="stat-icon leaves"><i class="fa-solid fa-envelope-open-text"></i></div>
+        <div class="stat-info">
+          <h3>Pending Leaves</h3>
+          <p id="dash-leaves">Loading...</p>
+        </div>
+      </div>
+
+      <div class="glass-panel stat-card">
+        <div class="stat-icon messages"><i class="fa-solid fa-comments"></i></div>
+        <div class="stat-info">
+          <h3>Unread Messages</h3>
+          <p id="dash-messages">Loading...</p>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

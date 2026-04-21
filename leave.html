@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Management - EduBridge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <aside class="glass-panel sidebar">
+    <div class="sidebar-logo">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span>EduBridge</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="attendance.html"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+      <li><a href="leave.html"><i class="fa-solid fa-envelope-open-text"></i> Leave</a></li>
+      <li><a href="chat.html"><i class="fa-solid fa-comments"></i> Mentor Chat</a></li>
+      <li><a href="report.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    
+    <header class="header">
+      <div>
+        <h1>Apply for Leave</h1>
+        <p style="color: var(--text-muted); margin-top: 5px;">Submit and track your leave requests.</p>
+      </div>
+      <div class="user-profile">
+        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+        <span class="username-display" style="font-weight: 500;"></span>
+        <button onclick="logout()" class="btn-primary" style="margin-left: 15px; padding: 8px 16px;">Logout</button>
+      </div>
+    </header>
+
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 24px;">
+        <!-- Form -->
+        <div class="glass-panel" style="padding: 24px; height: max-content;">
+            <h2 style="margin-bottom: 20px; font-size: 20px;">New Request</h2>
+            <div class="form-group">
+                <label for="date">Select Date</label>
+                <input type="date" id="date">
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Leave</label>
+                <textarea id="reason" rows="4" placeholder="Enter valid reason..."></textarea>
+            </div>
+            <button id="applyBtn" class="btn-primary" style="width: 100%;">Submit Application</button>
+        </div>
+
+        <!-- History -->
+        <div class="glass-panel table-container">
+            <h2 style="margin: 24px 24px 10px 24px; font-size: 20px;">Leave History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="leave-body">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

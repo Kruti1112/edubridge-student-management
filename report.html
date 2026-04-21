@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports - EduBridge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <aside class="glass-panel sidebar">
+    <div class="sidebar-logo">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span>EduBridge</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+      <li><a href="attendance.html"><i class="fa-solid fa-clipboard-user"></i> Attendance</a></li>
+      <li><a href="leave.html"><i class="fa-solid fa-envelope-open-text"></i> Leave</a></li>
+      <li><a href="chat.html"><i class="fa-solid fa-comments"></i> Mentor Chat</a></li>
+      <li><a href="report.html"><i class="fa-solid fa-chart-line"></i> Reports</a></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    
+    <header class="header">
+      <div>
+        <h1>Actionable Reports</h1>
+        <p style="color: var(--text-muted); margin-top: 5px;">Generate analytics and summaries.</p>
+      </div>
+      <div class="user-profile">
+        <div class="avatar"><i class="fa-solid fa-user"></i></div>
+        <span class="username-display" style="font-weight: 500;"></span>
+        <button onclick="logout()" class="btn-primary" style="margin-left: 15px; padding: 8px 16px;">Logout</button>
+      </div>
+    </header>
+
+    <div class="glass-panel" style="padding: 24px; max-width: 600px;">
+        <h2 style="font-size: 20px; margin-bottom: 20px;">Generate Comprehensive Report</h2>
+        <button id="genBtn" class="btn-primary"><i class="fa-solid fa-file-pdf"></i> Generate Full Report</button>
+        
+        <div id="reportData" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--glass-border);">
+            <p style="color: var(--text-muted);">Click the button above to generate a summary report of your attendance and leave records.</p>
+        </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

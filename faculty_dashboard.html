@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Dashboard - EduBridge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- Sidebar -->
+  <aside class="glass-panel sidebar">
+    <div class="sidebar-logo">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <span>EduBridge</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="faculty_dashboard.html"><i class="fa-solid fa-house"></i> Faculty Dashboard</a></li>
+      <li><a href="faculty_attendance.html"><i class="fa-solid fa-clipboard-user"></i> Manage Attendance</a></li>
+      <li><a href="faculty_leave.html"><i class="fa-solid fa-envelope-open-text"></i> Leave Approvals</a></li>
+      <li><a href="faculty_chat.html"><i class="fa-solid fa-comments"></i> Student Queries</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <header class="header">
+      <div>
+        <h1>Welcome, Faculty</h1>
+        <p style="color: var(--text-muted); margin-top: 5px;">Manage classes and student requests.</p>
+      </div>
+      <div class="user-profile">
+        <div class="avatar"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <span class="username-display" style="font-weight: 500;"></span>
+        <button onclick="logout()" class="btn-primary" style="margin-left: 15px; padding: 8px 16px;">Logout</button>
+      </div>
+    </header>
+
+    <div class="dashboard-grid">
+      <div class="glass-panel stat-card">
+        <div class="stat-icon leaves"><i class="fa-solid fa-clock-rotate-left"></i></div>
+        <div class="stat-info">
+          <h3>Pending Leave Approvals</h3>
+          <p id="fac-dash-leaves">Loading...</p>
+        </div>
+      </div>
+
+      <div class="glass-panel stat-card">
+        <div class="stat-icon messages"><i class="fa-solid fa-comment-dots"></i></div>
+        <div class="stat-info">
+          <h3>Total Student Queries</h3>
+          <p id="fac-dash-messages">Loading...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-panel" style="margin-top: 24px; padding: 24px;">
+      <h2 style="font-size: 20px; border-bottom: 1px solid var(--glass-border); padding-bottom: 10px; margin-bottom: 15px;">Recent Notifications</h2>
+      <ul id="fac-notifications-list" style="list-style: none; display: flex; flex-direction: column; gap: 12px;">
+         <!-- Populated via JS -->
+      </ul>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

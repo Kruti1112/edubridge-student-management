@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - EduBridge</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+  <div class="glass-panel login-card">
+    <div class="sidebar-logo justify-center" style="justify-content: center;">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>EduBridge Studio</span>
+    </div>
+    <h2>Student Portal Login</h2>
+    <div class="form-group text-left" style="text-align: left;">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your username">
+    </div>
+    <div class="form-group text-left" style="text-align: left;">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password">
+    </div>
+    <div class="form-group text-left" style="text-align: left;">
+        <label for="role">Role</label>
+        <select id="role">
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty / Mentor</option>
+        </select>
+    </div>
+    <button id="loginBtn" class="btn-primary" style="width: 100%; margin-top: 10px;">Login securely</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
